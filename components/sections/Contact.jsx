@@ -107,7 +107,7 @@ const Contact = () => {
                   name="fullname"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Fullname</FormLabel>
+                      <FormLabel>Full name</FormLabel>
                       <FormControl>
                         <Input placeholder="Erik ten Hag" {...field} />
                       </FormControl>

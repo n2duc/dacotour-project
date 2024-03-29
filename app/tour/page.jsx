@@ -1,10 +1,15 @@
 import { Archivo } from "next/font/google";
 
-import { MapPinned, Heart, Clock3, Users, CarFront, Bookmark } from 'lucide-react';
+import { MapPinned, Heart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import BreadCrumb from "@/components/BreadCrumb";
-import TourSlide from "@/components/TourSlide";
-import TourSnapShot from "@/components/TourSnapShot";
+import TourSlide from "@/components/tour/TourSlide";
+import TourSnapShot from "@/components/tour/TourSnapShot";
+import TourOverview from "@/components/tour/TourOverview";
+import TourSchedule from "@/components/tour/TourSchedule";
+import TourFeatures from "@/components/tour/TourFeatures";
+import TourNote from "@/components/tour/TourNote";
+import TourBooking from "@/components/tour/TourBooking";
 
 const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo", });
 
@@ -26,19 +31,24 @@ export default function TourPage() {
           </div>
         </div>
 
-        <div className="flex w-full gap-8 mt-8">
+        <div className="flex w-full gap-8 pt-8">
           <div className="flex-grow">
             <TourSlide />
             <TourSnapShot />
+            <TourOverview />
+            <TourSchedule />
+            <TourFeatures />
+            <TourNote />
+            <TourBooking />
           </div>
           <div className="min-w-[384px] max-w-[25vw]">
-            <div className="w-full bg-white border border-gray-200 rounded-xl">
+            <div className="w-full bg-white border border-gray-200 rounded-xl sticky top-28">
               <div className="px-6 py-5 border-b border-gray-200 text-lg">
                 Price from <span className="font-semibold">$30</span>/adult
               </div>
               <div className="px-6 py-5 flex flex-col items-center gap-4">
-                <Button variant="primary" size="lg" className="w-full">Book Tour</Button>
-                <Button variant="secondary" size="lg" className="w-full">Contact</Button>
+                <Button variant="primary" size="lg" className="w-full font-bold">Book Tour</Button>
+                <Button variant="secondary" size="lg" className="w-full font-bold">Contact</Button>
                 <div className="flex items-center gap-2">
                   <Heart size={16} />
                   <p className="text-sm">94% of travelers recommend this experience</p>

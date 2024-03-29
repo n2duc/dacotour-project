@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
 const TourItem = ({ images, title, duration, price }) => {
   return (
@@ -23,6 +23,7 @@ const TourItem = ({ images, title, duration, price }) => {
           delay: 4000,
           disableOnInteraction: false,
         }}
+        speed={2000}
         modules={[Autoplay]}
         className="mySwiper w-full h-[252px] overflow-hidden relative"
       >

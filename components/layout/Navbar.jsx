@@ -75,7 +75,7 @@ import {
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 left-0 w-full shadow z-[9999]">
+    <header className="sticky top-0 left-0 w-full border-b border-gray-200 z-[200]">
       {/* Topbar */}
       <div className="bg-primary py-2 w-full">
         <div className="max-container flex items-center justify-between">

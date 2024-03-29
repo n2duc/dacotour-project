@@ -1,7 +1,7 @@
 'use client';
 
 import Heading from '../common/Heading';
-import TourItem from '../TourItem';
+import TourItem from '../tour/TourItem';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -91,6 +91,7 @@ const TourSection = () => {
             delay: 4000,
             disableOnInteraction: true,
           }}
+          speed={2000}
           pagination={{
             el: '.swiper-custom-pagination',
           }}
