@@ -109,7 +109,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Full name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Erik ten Hag" {...field} />
+                        <Input placeholder="Your full name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -122,7 +122,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="abc123@gmail.com" {...field} />
+                        <Input placeholder="youremail@gmail.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -135,7 +135,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="I wanna a girlfriend but..." className="h-32 max-h-32 resize-none" {...field} />
+                        <Textarea placeholder="Your message" className="h-32 max-h-32 resize-none" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
