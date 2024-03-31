@@ -1,4 +1,5 @@
 import { Archivo } from "next/font/google";
+const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo", });
 
 import { MapPinned, Heart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -6,22 +7,26 @@ import BreadCrumb from "@/components/BreadCrumb";
 import TourSlide from "@/components/tour/TourSlide";
 import TourSnapShot from "@/components/tour/TourSnapShot";
 import TourOverview from "@/components/tour/TourOverview";
-import TourSchedule from "@/components/tour/TourSchedule";
+import TourTimeLine from "@/components/tour/TourTimeLine";
 import TourFeatures from "@/components/tour/TourFeatures";
 import TourNote from "@/components/tour/TourNote";
 import TourBooking from "@/components/tour/TourBooking";
-
-const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo", });
+import TourReview from "@/components/tour/TourReview";
+import getTour from "@/lib/tours/getTour";
 
 export const metadata = {
   title: 'Tour Detail Page',
   description: 'This is a tour page',
 };
 
-export default function TourPage() {
+export default async function TourPage() {
+  const res = await getTour("6607b67d5b01e57a68ec14f0");
+  const data = res?.data;
+  const { timeLine, includeAndNot, note } = data;
+
   return (
     <div className="flex-grow w-full">
-      <div className="max-container py-5">
+      <div className="max-container">
         <BreadCrumb />
         <div className="py-6">
           <h1 className={`${archivo.variable} text-3xl font-archivo font-bold mb-2`}>Tour Bà Nà Hills</h1>
@@ -31,23 +36,24 @@ export default function TourPage() {
           </div>
         </div>
 
-        <div className="flex w-full gap-8 pt-8">
+        <div className="flex w-full gap-8 py-8">
           <div className="flex-grow">
             <TourSlide />
             <TourSnapShot />
             <TourOverview />
-            <TourSchedule />
-            <TourFeatures />
-            <TourNote />
+            <TourTimeLine data={timeLine} />
+            <TourFeatures data={includeAndNot} />
+            <TourNote data={note} />
             <TourBooking />
+            <TourReview />
           </div>
           <div className="min-w-[384px] max-w-[25vw]">
-            <div className="w-full bg-white border border-gray-200 rounded-xl sticky top-28">
+            <div className="w-full bg-white border border-gray-200 rounded-xl sticky top-28 shadow-sm">
               <div className="px-6 py-5 border-b border-gray-200 text-lg">
                 Price from <span className="font-semibold">$30</span>/adult
               </div>
               <div className="px-6 py-5 flex flex-col items-center gap-4">
-                <Button variant="primary" size="lg" className="w-full font-bold">Book Tour</Button>
+                <Button variant="orange" size="lg" className="w-full font-bold">Book Tour</Button>
                 <Button variant="secondary" size="lg" className="w-full font-bold">Contact</Button>
                 <div className="flex items-center gap-2">
                   <Heart size={16} />

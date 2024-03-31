@@ -5,5 +5,5 @@ export default async function getBlog(blogId) {
     throw new Error('Something went wrong');
   }
 
-  return await response.json();
+  return response.json();
 }

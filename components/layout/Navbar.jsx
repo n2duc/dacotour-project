@@ -103,7 +103,7 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <div className=" bg-white py-[6px]">
+      <div className=" bg-white py-2 pt-3">
         <div className="max-container flex justify-between items-center w-full relative z-30">
           <Link href="/">
             <Image src="/logo-dacotours.png" alt="logo dacotours" width={180} height={40} />
@@ -117,15 +117,15 @@ const Navbar = () => {
                     <ul className="flex gap-5 p-4 w-[300px]">
                       <div className="flex w-full flex-col">
                         <p className="text-sm font-semibold mb-3 pl-1">Private tours</p>
-                        <LinkNavItem title="North" href="/daily-tours" />
-                        <LinkNavItem title="Central" href="/daily-tours" />
-                        <LinkNavItem title="South" href="/daily-tours" />
+                        <LinkNavItem title="North" href="/tours/daily-private-north" />
+                        <LinkNavItem title="Central" href="/tours/daily-private-central" />
+                        <LinkNavItem title="South" href="/tours/daily-private-south" />
                       </div>
                       <div className="flex w-full flex-col">
                         <p className="text-sm font-semibold mb-3 pl-1">Group tours</p>
-                        <LinkNavItem title="North" href="/group-tours" />
-                        <LinkNavItem title="Central" href="/group-tours" />
-                        <LinkNavItem title="South" href="/group-tours" />
+                        <LinkNavItem title="North" href="/tours/daily-group-north" />
+                        <LinkNavItem title="Central" href="/tours/daily-group-central" />
+                        <LinkNavItem title="South" href="/tours/daily-group-south" />
                       </div>
                     </ul>
                   </NavigationMenuContent>
@@ -133,10 +133,19 @@ const Navbar = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Multi-day tours</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="flex flex-col gap-1 p-4 w-[300px]">
-                      <LinkNavItem title="North" href="/daily-tours" />
-                      <LinkNavItem title="Central" href="/daily-tours" />
-                      <LinkNavItem title="South" href="/daily-tours" />
+                    <ul className="flex gap-5 p-4 w-[300px]">
+                      <div className="flex w-full flex-col">
+                        <p className="text-sm font-semibold mb-3 pl-1">Private tours</p>
+                        <LinkNavItem title="North" href="/tours/multi-private-north" />
+                        <LinkNavItem title="Central" href="/tours/multi-private-central" />
+                        <LinkNavItem title="South" href="/tours/multi-private-south" />
+                      </div>
+                      <div className="flex w-full flex-col">
+                        <p className="text-sm font-semibold mb-3 pl-1">Group tours</p>
+                        <LinkNavItem title="North" href="/tours/multi-group-north" />
+                        <LinkNavItem title="Central" href="/tours/multi-group-central" />
+                        <LinkNavItem title="South" href="/tours/multi-group-south" />
+                      </div>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -162,9 +171,9 @@ const Navbar = () => {
                   <NavigationMenuTrigger>Other services</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="flex flex-col gap-1 p-4 w-[300px]">
-                      <LinkNavItem title="Hotel Booking" href="/service/hotel-booking" />
-                      <LinkNavItem title="Flight Booking" href="/service/flight-booking" />
-                      <LinkNavItem title="Transportation Booking" href="/service/transportation-booking" />
+                      <LinkNavItem title="Hotel Booking" href="/services/hotel-booking" />
+                      <LinkNavItem title="Flight Booking" href="/services/flight-booking" />
+                      <LinkNavItem title="Transportation Booking" href="/services/transportation-booking" />
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>

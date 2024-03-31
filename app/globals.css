@@ -75,3 +75,38 @@ html {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+
+
+.image-slide {
+  animation: 40s slide infinite linear;
+}
+.imageList:hover .image-slide {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+
+
+.slide-image-sencond .image-slide {
+  animation: 40s slideReverse infinite linear;
+}
+.slide-image-sencond .imageList:hover .image-slide {
+  animation-play-state: paused;
+}
+
+@keyframes slideReverse {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}

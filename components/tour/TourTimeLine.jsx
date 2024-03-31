@@ -33,19 +33,19 @@ const schedule = [
   },
 ]
 
-const TourSchedule = () => {
+const TourSchedule = ({ data }) => {
   return (
     <div className="py-8 border-b border-gray-200" id="schedule">
       <h4 className="text-2xl font-bold text-black mb-6">Schedule</h4>
       <div className="w-full ">
         <Accordion type="single" collapsible className="w-full flex flex-col gap-5">
-          {schedule.map((item, index) => (
+          {data.map((item, index) => (
             <div className="flex items-start w-full gap-5 text-black" key={item.time}>
-              <div className="flex flex-shrink-0 items-center justify-center bg-primary w-14 h-14 rounded-full font-bold text-xs">{item.time}</div>
+              <div className="flex flex-shrink-0 items-center justify-center bg-primary w-14 h-14 border-4 border-green-200 rounded-full font-bold text-xs text-gray-700">{item.time}</div>
               <AccordionItem value={`item-${index + 1}`} className="w-full border border-slate-300 px-3 rounded-md">
                 <AccordionTrigger className="hover:no-underline">{item.title}</AccordionTrigger>
                 <AccordionContent>
-                  {item.description}
+                  {item.noteTimeLine}
                 </AccordionContent>
               </AccordionItem>
             </div>

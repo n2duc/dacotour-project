@@ -1,20 +1,20 @@
 import { Check, X } from "lucide-react";
 import TourContentWrap from "./TourContentWrap";
 
-const TourFeatures = () => {
+const TourFeatures = ({ data }) => {
+  const { include, notInclude } = data;
   return (
     <TourContentWrap id="features" title="Features">
       <div className="flex items-start gap-7 w-full">
         <div className="flex flex-col text-secondary max-w-[350px] w-full gap-y-4">
-          <IncludeItem text="Xe du lịch điều hòa, đưa đón tại trung tâm thành phố Đà Nẵng" />
-          <IncludeItem text="Ăn trưa tại nhà hàng ở Hội An" />
-          <IncludeItem text="Vé tham quan tuyến điểm theo chương trình" />
-          <IncludeItem text="Nước suối: 01 đơn vị/ khách" />
-          <IncludeItem text="Bảo hiểm du lịch" />
+          {include.map((item, index) => (
+            <IncludeItem key={index} text={item} />
+          ))}
         </div>
         <div className="flex flex-col text-red-500 gap-y-4">
-          <NotIncludeItem text="Thuế VAT" />
-          <NotIncludeItem text="Chi phí cá nhân phát sinh ngoài chương trình" />
+          {notInclude.map((item, index) => (
+            <NotIncludeItem key={index} text={item} />
+          ))}
         </div>
       </div>
     </TourContentWrap>

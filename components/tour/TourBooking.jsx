@@ -96,7 +96,7 @@ const TourBooking = () => {
               name="fullname"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel className="after:content-['_*'] after:text-red-500">Full Name</FormLabel>
                   <FormControl>
                     <Input placeholder="Your full name" {...field} />
                   </FormControl>
@@ -131,7 +131,7 @@ const TourBooking = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel className="after:content-['_*'] after:text-red-500">Email</FormLabel>
                   <FormControl>
                     <Input placeholder="Your email" {...field} />
                   </FormControl>
@@ -144,7 +144,7 @@ const TourBooking = () => {
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone/Whatsapp/Zalo/...</FormLabel>
+                  <FormLabel className="after:content-['_*'] after:text-red-500">Phone/Whatsapp/Zalo/...</FormLabel>
                   <FormControl>
                     <Input placeholder="Your phone" {...field} />
                   </FormControl>
@@ -161,7 +161,7 @@ const TourBooking = () => {
               name="startDate"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Start Date</FormLabel>
+                  <FormLabel className="after:content-['_*'] after:text-red-500">Start Date</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
