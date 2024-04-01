@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const GreatMomentSection = () => {
   return (
-    <section className="bg-white w-full py-8 pb-16" id="great-moment">
+    <section className="bg-white w-full py-8 pb-16 scroll-mt-20" id="great-moment">
       <div className="">
         <Heading heading="Greate Moment With Dacotours" />
         <div className="overflow-hidden">

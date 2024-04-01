@@ -13,76 +13,86 @@ import 'swiper/css/navigation';
 const testData = [
   {
     id: 1,
+    href: "/",
     images: [
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
     ],
     location: "Đà Nẵng",
     title: "Tour Cù Lao Chàm Lặn Bình Dưỡng Khí",
-    duration: "7-8",
-    price: "670.000đ"
+    duration: "7-8 days",
+    price: "299",
+    typeTour: "daily-group-central"
   },
   {
     id: 2,
+    href: "/",
     images: [
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
     ],
     location: "Đà Nẵng",
     title: "Tour Cù Lao Chàm Lặn Bình Dưỡng Khí",
-    duration: "7-8",
-    price: "670.000đ"
+    duration: "7-8 days",
+    price: "299",
+    typeTour: "daily-group-central"
   },
   {
     id: 3,
+    href: "/",
     images: [
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
     ],
     location: "Đà Nẵng",
     title: "Tour Cù Lao Chàm Lặn Bình Dưỡng Khí",
-    duration: "7-8",
-    price: "670.000đ"
+    duration: "7-8 days",
+    price: "299",
+    typeTour: "daily-group-central"
   },
   {
     id: 4,
+    href: "/",
     images: [
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
     ],
     location: "Đà Nẵng",
     title: "Tour Cù Lao Chàm Lặn Bình Dưỡng Khí",
-    duration: "7-8",
-    price: "670.000đ"
+    duration: "7-8 days",
+    price: "299",
+    typeTour: "daily-group-central"
   },
   {
     id: 5,
+    href: "/",
     images: [
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
-      "/card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
+      "card-forest.png",
     ],
     location: "Đà Nẵng",
     title: "Tour Cù Lao Chàm Lặn Bình Dưỡng Khí",
-    duration: "7-8",
-    price: "670.000đ"
+    duration: "7-8 days",
+    price: "299",
+    typeTour: "daily-group-central"
   }
 ]
 
-const TourSection = () => {
+const TourSection = ({ heading }) => {
   return (
     <section className="bg-white">
       <div className="max-container py-9">
-        <Heading heading="TOP SELLING DAILY GROUP TOUR" />
+        <Heading heading={heading} />
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
@@ -101,11 +111,13 @@ const TourSection = () => {
           {testData.map((tour) => (
             <SwiperSlide key={tour.id}>
               <TourItem
+                recommended
                 title={tour.title}
                 images={tour.images}
                 duration={tour.duration}
                 location={tour.location}
                 price={tour.price}
+                typeTour={tour.typeTour}
               />
             </SwiperSlide>
           ))}

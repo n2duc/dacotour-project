@@ -4,7 +4,7 @@ import TourContentWrap from "./TourContentWrap";
 const TourFeatures = ({ data }) => {
   const { include, notInclude } = data;
   return (
-    <TourContentWrap id="features" title="Features">
+    <TourContentWrap id="features" title="Included/Exclude" className="scroll-mt-28">
       <div className="flex items-start gap-7 w-full">
         <div className="flex flex-col text-secondary max-w-[350px] w-full gap-y-4">
           {include.map((item, index) => (

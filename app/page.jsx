@@ -11,8 +11,8 @@ export default function Home() {
     <div className="flex flex-col">
       <Banner/>
       <TestimonialsSection />
-      <TourSection />
-      <TourSection />
+      <TourSection heading="TOP SELLING DAILY GROUP TOUR" />
+      <TourSection heading="BEST FAVORITE PRIVATE TOUR" />
       <OtherTourSection />
       <GreatMomentSection />
       <TripadvisorSection />

@@ -1,9 +1,9 @@
 import { Archivo } from "next/font/google";
 const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo", });
 
-const TourContentWrap = ({ id = null, title, children }) => {
+const TourContentWrap = ({ id = null, title, children, className }) => {
   return (
-    <div className="py-8 border-b border-gray-200" id={id}>
+    <div className={`py-8 border-b border-gray-200 scroll-mt-14 ${className}`} id={id}>
       <h4 className={`${archivo.variable} text-2xl font-bold text-black mb-6 capitalize font-archivo`}>{title}</h4>
       {children}
     </div>

@@ -1,10 +1,11 @@
 import BreadCrumb from '@/components/BreadCrumb';
+import { Badge } from "@/components/ui/badge"
 import Date from '@/components/common/Date';
 import getBlog from '@/lib/blogs/getBlog';
 import { notFound } from 'next/navigation'
 
 async function getPostFromParams(params) {
-  const blog = await getBlog(params?.slug[0]);
+  const blog = await getBlog(params?.slug);
 
   if (!blog || !blog.data) {
     notFound();
@@ -30,18 +31,17 @@ export default async function BlogPage({ params }) {
   }
 
   return (
-    <article className="max-container">
-      <BreadCrumb />
-      <div className="py-8">
-        <h1 className="text-xl font-bold">Blog Post</h1>
-        <h2>Title: {post.title}</h2>
-        <p>Des: {post.des}</p>
-        <p>Create at: <Date dateString={post.createdAt} /></p>
-        <div className="w-full max-w-[1000px] mx-auto">
-          {post.content.map((content, index) => (
-            <div key={index} dangerouslySetInnerHTML={{__html: content}}></div>
-          ))}
-        </div>
+    <article className="max-container flex flex-col gap-16">
+      <BreadCrumb lastName={post.title} />
+      <div className="flex flex-col items-center px-10 justify-center text-center">
+        <h5 className="font-bold text-4xl text-gray-900 mb-3">{post.title}</h5>
+        <Badge className="mb-6 text-gray-800"><Date dateString={post.createdAt} /></Badge>
+        <p className="italic">{post.des}</p>
+      </div>
+      <div className="w-full px-10 pb-10">
+        {post.content.map((content, index) => (
+          <div key={index} dangerouslySetInnerHTML={{__html: content}}></div>
+        ))}
       </div>
     </article>
   );

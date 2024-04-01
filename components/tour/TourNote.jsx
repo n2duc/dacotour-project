@@ -5,7 +5,7 @@ const TourNote = ({ data }) => {
   const { noted, surcharge } = data[0];
 
   return (
-    <TourContentWrap title="Note">
+    <TourContentWrap title="Note" id="note" className="scroll-mt-28" >
       <div className="flex flex-col gap-3">
         {noted.map((item, index) => (
           <div key={index} className="flex items-start gap-2">

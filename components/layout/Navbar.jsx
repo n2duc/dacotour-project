@@ -188,11 +188,11 @@ const Navbar = () => {
                   <NavigationMenuTrigger>More</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="flex flex-col gap-1 p-4 w-[320px]">
-                      <LinkNavItem title="Great moments with travelers" href="#great-moment" />
-                      <LinkNavItem title="Testimonials" href="#testimonials" />
+                      <LinkNavItem title="Great moments with travelers" href="/#great-moment" />
+                      <LinkNavItem title="Testimonials" href="/#testimonials" />
                       <LinkNavItem title="Blog" href="/blog" />
-                      <LinkNavItem title="FAQ" href="#" />
-                      <LinkNavItem title="Contact us" href="#contact" />
+                      <LinkNavItem title="FAQ" href="/" />
+                      <LinkNavItem title="Contact us" href="/#contact" />
                       <LinkNavItem title="Payment Method for tours" href="/payment-method" />
                     </ul>
                   </NavigationMenuContent>
@@ -211,7 +211,7 @@ const LinkNavItem = ({ className, title, href, ...props }) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <Link href={href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" {...props}>
+        <Link href={href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" {...props} scroll={false}>
           <p className="text-sm font-medium leading-none">{title}</p>
         </Link>
       </NavigationMenuLink>

@@ -2,6 +2,7 @@ import { Archivo } from "next/font/google";
 const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo", });
 
 import { MapPinned, Heart } from 'lucide-react';
+
 import { Button } from "@/components/ui/button";
 import BreadCrumb from "@/components/BreadCrumb";
 import TourSlide from "@/components/tour/TourSlide";
@@ -12,7 +13,9 @@ import TourFeatures from "@/components/tour/TourFeatures";
 import TourNote from "@/components/tour/TourNote";
 import TourBooking from "@/components/tour/TourBooking";
 import TourReview from "@/components/tour/TourReview";
+
 import getTour from "@/lib/tours/getTour";
+import TourHeader from "@/components/tour/TourHeader";
 
 export const metadata = {
   title: 'Tour Detail Page',
@@ -20,7 +23,7 @@ export const metadata = {
 };
 
 export default async function TourPage() {
-  const res = await getTour("6607b67d5b01e57a68ec14f0");
+  const res = await getTour("66094b9711dc3a1b6d1afec6");
   const data = res?.data;
   const { timeLine, includeAndNot, note } = data;
 
@@ -39,13 +42,16 @@ export default async function TourPage() {
         <div className="flex w-full gap-8 py-8">
           <div className="flex-grow">
             <TourSlide />
-            <TourSnapShot />
-            <TourOverview />
-            <TourTimeLine data={timeLine} />
-            <TourFeatures data={includeAndNot} />
-            <TourNote data={note} />
-            <TourBooking />
-            <TourReview />
+            <div className="w-full">
+              <TourHeader />
+              <TourSnapShot />
+              <TourOverview />
+              <TourTimeLine data={timeLine} />
+              <TourFeatures data={includeAndNot} />
+              <TourNote data={note} />
+              <TourBooking />
+              <TourReview />
+            </div>
           </div>
           <div className="min-w-[384px] max-w-[25vw]">
             <div className="w-full bg-white border border-gray-200 rounded-xl sticky top-28 shadow-sm">

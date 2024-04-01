@@ -35,8 +35,8 @@ const schedule = [
 
 const TourSchedule = ({ data }) => {
   return (
-    <div className="py-8 border-b border-gray-200" id="schedule">
-      <h4 className="text-2xl font-bold text-black mb-6">Schedule</h4>
+    <div className="py-8 border-b border-gray-200 scroll-mt-32" id="timeline">
+      <h4 className="text-2xl font-bold text-black mb-6">Time Line</h4>
       <div className="w-full ">
         <Accordion type="single" collapsible className="w-full flex flex-col gap-5">
           {data.map((item, index) => (

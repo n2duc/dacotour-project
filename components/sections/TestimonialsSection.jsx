@@ -34,7 +34,7 @@ const TestimonialContent = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="bg-[#D9E8D5] py-12 w-full" id="testimonials">
+    <section className="bg-[#D9E8D5] py-16 w-full scroll-mt-20" id="testimonials">
       <div className="max-container flex gap-8">
         <div className="bg-primary py-9 px-14 flex flex-col items-center justify-between rounded relative">
           <p className="-ml-24 text-[40px] text-white uppercase font-bold leading-[42px] z-30">Number <span className="text-[64px] text-yellow-400 font-extrabold text-stroke">1</span></p>

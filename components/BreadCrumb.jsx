@@ -13,7 +13,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-const BreadCrumb = () => {
+const BreadCrumb = ({ lastName }) => {
   const paths = usePathname();
   const pathNames = paths.split("/").filter(path => path);
   // console.log("LOG: " + pathNames);
@@ -42,7 +42,7 @@ const BreadCrumb = () => {
                       <Link href={href}>{linkName}</Link>
                     </BreadcrumbLink>
                   ) : (
-                    <BreadcrumbPage>{linkName}</BreadcrumbPage>
+                    <BreadcrumbPage>{lastName}</BreadcrumbPage>
                   )}
                 </BreadcrumbItem>
                 {pathNames.length !== index + 1 && <BreadcrumbSeparator />}

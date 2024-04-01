@@ -60,10 +60,10 @@ const Contact = () => {
   }
 
   return (
-    <section className="w-full bg-white py-24" id="contact">
+    <section className="w-full bg-white py-24 scroll-mt-10" id="contact">
       <div className="max-container w-full">
         <div className="flex w-full items-center bg-[#D9E8D5] border-4 border-white rounded-md overflow-hidden shadow-md">
-          <div className="h-[560px] w-[560px] relative">
+          <div className="h-[520px] w-[560px] relative">
             <div className="absolute bottom-6 left-6 text-white z-50 max-w-[300px]">
               <p className={cn("text-[32px] font-bold", sansita.className)}>Dacotours</p>
               <p className="text-sm font-semibold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, maxime harum? Vero repellat odio numquam!</p>
@@ -81,7 +81,7 @@ const Contact = () => {
                 disableOnInteraction: false,
               }}
               modules={[Autoplay, EffectFade]}
-              className="mySwiper h-[560px] w-[560px] relative"
+              className="mySwiper h-[520px] w-[560px] relative"
             >
               <SwiperSlide>
                 <Image src="/image-resort.png" alt="contact" layout="fill" objectFit="cover" />

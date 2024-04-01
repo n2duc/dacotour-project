@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const TourReview = () => {
   return (
-    <div className="py-8 pb-10 border-gray-200" id="review">
+    <div className="py-8 pb-10 border-gray-200 scroll-mt-28" id="review">
       <h4 className="text-2xl font-bold text-black mb-6 capitalize">Reviews</h4>
       <div className="w-full flex gap-8">
         <Link href="https://www.tripadvisor.com.vn/Attraction_Review-g298085-d6974493-Reviews-Dacotours-Da_Nang.html" target="_blank">
