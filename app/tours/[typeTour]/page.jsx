@@ -1,6 +1,7 @@
 import BreadCrumb from "@/components/BreadCrumb";
 import TourItem from "@/components/tour/TourItem";
 import getTours from "@/lib/tours/getTours";
+import getTypeTour from "@/lib/tours/getTypeTour";
 import { renameTypeTour } from "@/lib/utils";
 
 async function getToursType(typeTour) {
@@ -8,6 +9,13 @@ async function getToursType(typeTour) {
   if (!tours) {
     return null;
   }
+  // return tours.filter(async (tour) => {
+  //   const typeTour = await getTypeTour(tour.idTypeTours)
+  //   if (!tour.typeTour.nameTypeTour) {
+  //     return typeTour === typeTour;
+  //   }
+  //   return tour.typeTour.nameTypeTour === typeTour
+  // });
   return tours.filter((tour) => tour.typeTour.nameTypeTour === typeTour);
 }
 

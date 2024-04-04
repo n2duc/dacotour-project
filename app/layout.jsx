@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import { Toaster } from "@/components/ui/toaster";
 
 // const inter = Inter({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-sans", });
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={openSans.className}>
         <ActiveSectionContextProvider>
           <Navbar />
+          <Toaster />
           <main>
             {children}
           </main>

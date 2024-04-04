@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['random.imagecdn.app'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "random.imagecdn.app",
+        port: '',
+      }
+    ]
   },
 };
 

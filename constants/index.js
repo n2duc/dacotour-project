@@ -7,6 +7,15 @@ export const NAV_LINKS = [
   { href: '/about-us', key: 'about_us', label: 'Giới thiệu' },
 ];
 
+export const MORE_NAV_LINKS = [
+  { href: '/#great-moment', title: 'Great moments with travelers' },
+  { href: '/#testimonials', title: 'Testimonials' },
+  { href: '/blog', title: 'Blog' },
+  { href: '/', title: 'FAQ' },
+  { href: '/#contact', title: 'Contact us' },
+  { href: '/', title: 'Payment Method for tours' },
+]
+
 
 // FOOTER
 export const FOOTER_CONTENTS = [

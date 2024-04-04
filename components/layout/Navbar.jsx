@@ -15,6 +15,7 @@ import {
   NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { MORE_NAV_LINKS } from "@/constants";
 
 // const Navbar = () => {
 //   return (
@@ -108,7 +109,7 @@ const Navbar = () => {
           <Link href="/">
             <Image src="/logo-dacotours.png" alt="logo dacotours" width={180} height={40} />
           </Link>
-          <div className="flex">
+          <div className="hidden lg:flex">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -116,13 +117,13 @@ const Navbar = () => {
                   <NavigationMenuContent>
                     <ul className="flex gap-5 p-4 w-[300px]">
                       <div className="flex w-full flex-col">
-                        <p className="text-sm font-semibold mb-3 pl-1">Private tours</p>
+                        <p className="text-sm font-medium leading-none mb-3 pl-1">Private tours</p>
                         <LinkNavItem title="North" href="/tours/daily-private-north" />
                         <LinkNavItem title="Central" href="/tours/daily-private-central" />
                         <LinkNavItem title="South" href="/tours/daily-private-south" />
                       </div>
                       <div className="flex w-full flex-col">
-                        <p className="text-sm font-semibold mb-3 pl-1">Group tours</p>
+                        <p className="text-sm font-medium leading-none mb-3 pl-1">Group tours</p>
                         <LinkNavItem title="North" href="/tours/daily-group-north" />
                         <LinkNavItem title="Central" href="/tours/daily-group-central" />
                         <LinkNavItem title="South" href="/tours/daily-group-south" />
@@ -188,12 +189,9 @@ const Navbar = () => {
                   <NavigationMenuTrigger>More</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="flex flex-col gap-1 p-4 w-[320px]">
-                      <LinkNavItem title="Great moments with travelers" href="/#great-moment" />
-                      <LinkNavItem title="Testimonials" href="/#testimonials" />
-                      <LinkNavItem title="Blog" href="/blog" />
-                      <LinkNavItem title="FAQ" href="/" />
-                      <LinkNavItem title="Contact us" href="/#contact" />
-                      <LinkNavItem title="Payment Method for tours" href="/payment-method" />
+                      {MORE_NAV_LINKS.map((link, index) => (
+                        <LinkNavItem key={index} title={link.title} href={link.href} />
+                      ))}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -207,11 +205,11 @@ const Navbar = () => {
   )
 }
 
-const LinkNavItem = ({ className, title, href, ...props }) => {
+const LinkNavItem = ({ title, href, ...props }) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <Link href={href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" {...props} scroll={false}>
+        <Link href={href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" {...props}>
           <p className="text-sm font-medium leading-none">{title}</p>
         </Link>
       </NavigationMenuLink>

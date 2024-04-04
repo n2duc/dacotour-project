@@ -8,7 +8,7 @@ import GreatMomentSection from "@/components/sections/GreatMomentSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center">
       <Banner/>
       <TestimonialsSection />
       <TourSection heading="TOP SELLING DAILY GROUP TOUR" />
