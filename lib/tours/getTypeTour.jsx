@@ -1,5 +1,7 @@
+import { TYPE_TOURS_ROUTES } from "@/constants";
+
 export default async function getTypeTour(typeTourId) {
-  const response = await fetch(`http://localhost:8080/type-tours/${typeTourId}`);
+  const response = await fetch(`${TYPE_TOURS_ROUTES}/${typeTourId}`);
 
   if (!response.ok) {
     throw new Error('Something went wrong');

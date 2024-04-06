@@ -1,3 +1,9 @@
+export const API_URL = process.env.SERVER_BASE;
+export const BLOGS_ROUTES = `${API_URL}/blogs`;
+export const TOURS_ROUTES = `${API_URL}/tours`;
+export const TYPE_TOURS_ROUTES = `${API_URL}/type-tours`;
+export const SERVICES_ROUTES = `${API_URL}/send-emails/request-from-user`;
+
 // NAVIGATION
 export const NAV_LINKS = [
   { href: '/', key: 'home', label: 'Tour' },
@@ -7,6 +13,17 @@ export const NAV_LINKS = [
   { href: '/about-us', key: 'about_us', label: 'Giới thiệu' },
 ];
 
+export const TYPE_TOURS_LINK = {
+  daily: [
+    { title: 'North', href: '/tours/daily-private-north' },
+    { title: 'Central', href: '/tours/daily-private-central' },
+    { title: 'South', href: '/tours/daily-private-south' },
+  ],
+  multiDay: [
+
+  ]
+}
+
 export const MORE_NAV_LINKS = [
   { href: '/#great-moment', title: 'Great moments with travelers' },
   { href: '/#testimonials', title: 'Testimonials' },
@@ -15,7 +32,6 @@ export const MORE_NAV_LINKS = [
   { href: '/#contact', title: 'Contact us' },
   { href: '/', title: 'Payment Method for tours' },
 ]
-
 
 // FOOTER
 export const FOOTER_CONTENTS = [

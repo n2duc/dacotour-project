@@ -1,28 +1,23 @@
 import BreadCrumb from "@/components/BreadCrumb";
 import TourItem from "@/components/tour/TourItem";
 import getTours from "@/lib/tours/getTours";
-import getTypeTour from "@/lib/tours/getTypeTour";
 import { renameTypeTour } from "@/lib/utils";
 
 async function getToursType(typeTour) {
   const tours = await getTours();
+  console.log("Type" + tours);
   if (!tours) {
     return null;
   }
-  // return tours.filter(async (tour) => {
-  //   const typeTour = await getTypeTour(tour.idTypeTours)
-  //   if (!tour.typeTour.nameTypeTour) {
-  //     return typeTour === typeTour;
-  //   }
-  //   return tour.typeTour.nameTypeTour === typeTour
-  // });
   return tours.filter((tour) => tour.typeTour.nameTypeTour === typeTour);
 }
 
 export default async function ToursPage({ params }) {
   const { typeTour } = params;
+  console.log("Params:" + typeTour);
 
   const tours = await getToursType(typeTour);
+  console.log("TOURS:" + tours);
 
   return (
     <div className="max-container">

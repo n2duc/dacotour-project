@@ -72,7 +72,7 @@ const OtherTourSection = () => {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[100px]">No.</TableHead>
+                {/* <TableHead className="w-[100px]">No.</TableHead> */}
                 <TableHead>Tours</TableHead>
                 <TableHead>Duration</TableHead>
                 <TableHead className="text-right">Price</TableHead>
@@ -81,11 +81,11 @@ const OtherTourSection = () => {
             <TableBody>
               {tours.map((tour, index) => (
                 <TableRow key={tour.id}>
-                  <TableCell className="font-semibold">{index + 1}</TableCell>
+                  {/* <TableCell className="font-semibold">{index + 1}</TableCell> */}
                   <TableCell>
                     <div className="flex items-start gap-6">
-                      <div className="relative w-[120px] h-[80px]">
-                        <Image src={tour.contents.image} alt="tour image" fill className="rounded-md" />
+                      <div className="w-[200px] h-[140px]">
+                        <Image src={tour.contents.image} alt="tour image" width={200} height={150} className="rounded-md h-[140px] object-cover" />
                       </div>
                       <div className="flex flex-col">
                         <p className="text-xl">{tour.contents.title}</p>

@@ -2,7 +2,7 @@ import { Clock3, Users, CarFront, Bookmark } from "lucide-react";
 
 const TourSnapShot = ({ duration, groupSize }) => {
   return (
-    <div className="py-6 border-b border-gray-200 scroll-mt-28" id="snap-shot">
+    <div className="py-6 border-b border-gray-200 scroll-mt-32" id="snap-shot">
       <h4 className="text-2xl font-bold text-black mb-6">Tour snapshot</h4>
       <div className="flex justify-between">
         <Item title="Tour duration" data={duration}>

@@ -98,7 +98,7 @@ const TourSection = ({ heading }) => {
           spaceBetween={30}
           grabCursor={true}
           autoplay={{
-            delay: 4000,
+            delay: 10000,
             disableOnInteraction: true,
           }}
           speed={2000}

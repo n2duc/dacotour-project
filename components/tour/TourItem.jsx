@@ -31,7 +31,7 @@ const TourItem = ({ images, title, duration, price, href, typeTour, recommended 
         }}
         loop={true}
         speed={2000}
-        // modules={[Autoplay]}
+        modules={[Autoplay]}
         className="mySwiper w-full h-[252px] overflow-hidden relative rounded-t-xl"
       >
         {images.map((image, index) => (
